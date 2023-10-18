@@ -116,7 +116,7 @@ let totalShoppingCart = olio + vino
 let spedizione = 10
 let valoreScontato = ( totalShoppingCart - ((totalShoppingCart * 20) / 100) )
 if (data === "18") {
-  totalShoppingCart = sconto
+  totalShoppingCart = valoreScontato
   console.log("OGGI E' IL BLACK-FRIDAY !!! *** 20% DI SCONTO ***");
 }
 if (totalShoppingCart < 50) {
@@ -140,6 +140,10 @@ console.log("GUARDA ESERCIZIO SOPRA ");
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
 console.log("ESERCIZIO 4 (EXTRA)");
+let isMale = true
+let gender
+gender = isMale ? "male" : "female"
+console.log(gender);
 
 
 /* ESERCIZIO EXTRA 5
@@ -150,17 +154,11 @@ console.log("ESERCIZIO 5 (EXTRA)");
 for (let i = 1; i < 101; i++) {
   if ((i % 3 === 0) && (i % 5 === 0)) {
     console.log(i + " FizzBuzz");
-  }
-  if (i % 3 === 0){
-    if ((i === 15) || (i === 30) || (i === 45) || (i === 60) || (i === 75) || (i === 90)) {
-     continue 
-    }
+  } else if (i % 3 === 0){
+    
     console.log(i + " Fizz");
-  }
-  if (i % 5 === 0) {
-    if ((i === 15) || (i === 30) || (i === 45) || (i === 60) || (i === 75) || (i === 90)) {
-      continue
-    }
+  } else if (i % 5 === 0) {
+    
     console.log(i + " Buzz");
   }
 
